@@ -26,6 +26,16 @@
 
         public DbSet<Setting> Settings { get; set; }
 
+        public DbSet<Movie> Movies { get; set; }
+
+        public DbSet<Actor> Actors { get; set; }
+
+        public DbSet<Director> Directors { get; set; }
+
+        public DbSet<ActorMovie> ActorsMovies { get; set; }
+
+        public DbSet<DirectorMovie> DirectorsMovies { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -96,6 +106,32 @@
                 .HasForeignKey(e => e.UserId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<ActorMovie>()
+                .HasKey(am => new { am.ActorId, am.MovieId });
+
+            builder.Entity<ActorMovie>()
+                .HasOne(a => a.Actor)
+                .WithMany(am => am.ActorsMovies)
+                .HasForeignKey(a => a.ActorId);
+
+            builder.Entity<ActorMovie>()
+                .HasOne(m => m.Movie)
+                .WithMany(am => am.ActorsMovies)
+                .HasForeignKey(m => m.MovieId);
+
+            builder.Entity<DirectorMovie>()
+                .HasKey(dm => new { dm.DirectorId, dm.MovieId });
+
+            builder.Entity<DirectorMovie>()
+                .HasOne(a => a.Director)
+                .WithMany(am => am.DirectorsMovies)
+                .HasForeignKey(a => a.DirectorId);
+
+            builder.Entity<DirectorMovie>()
+                .HasOne(m => m.Movie)
+                .WithMany(am => am.DirectorsMovies)
+                .HasForeignKey(m => m.MovieId);
         }
 
         private static void SetIsDeletedQueryFilter<T>(ModelBuilder builder)
