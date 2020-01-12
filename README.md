@@ -1,3 +1,3 @@
 # Movie-Catalog-AspNet-Core
 
-Not finished yet
+In process of development, not finished yet.
