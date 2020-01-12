@@ -1,59 +1,86 @@
-﻿@using MovieCatalogAspNetCore.Common
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <title>Каталог филми</title>
 
-    <environment names="Development">
-        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
-        <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
-    </environment>
-    <environment names="Staging,Production">
-        <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
-        <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
-    </environment>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Settings" asp-action="Index">Settings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
+
     <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @this.RenderBody()
-        </main>
-    </div>
-    
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <header>
+
+            <div class="snows">
+                <div class="box snow1"><img src="~/images/snow.gif" alt=""></div>
+                <div class="box snow2"><img src="~/images/snow.gif" alt=""></div>
+                <div class="box snow3"><img src="~/images/snow.gif" alt=""></div>
+            </div>
+
+            <div class="site-header">
+                <section class="logo">
+                    <div><p>КАТАЛОГ</p> <p>ФИЛМИ</p></div>
+                    <div><img src="~/logo/logo1.jpg" alt=""></div>
+                </section>
+
+                <section class="search">
+                    <form>
+                        <div>
+                            <input type="search" placeholder="Намери филм">
+                            <input type="submit" value="Търси">
+                        </div>
+                    </form>
+                </section>
+
+                <section class="log-in">
+                    <button class="btn-log-in">Вход</button>
+                </section>
+            </div>
+
+            <nav class="site-nav">
+                <ul>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">начало</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="DisplayAll">списък филми (а-я)</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Create">регистрирай филм</a></li>
+                    <li><a href="{{ site.baseurl }}news.html">новини</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="bg">
+            @*<img src="~/images/test3.jpg" srcset="images/test3.jpg 500w, images/test3.jpg 1200w" alt="">*@
         </div>
-    </footer>
+
+        @this.RenderBody()
+
+        <div class="subscribe">
+            <p>Абонирайте се</p>
+            <form>
+                <input type="email" placeholder="Вашият имейл..." required="">
+                <button class="btn-subscribe">Изпрати</button>
+            </form>
+        </div>
+        <div class="site-footer">
+            <div class="info">
+                <p> &copy; 2020 Авторско право | Всички права запазени.</p>
+            </div>
+
+            <div class="social">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
@@ -69,7 +96,7 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-
     @this.RenderSection("Scripts", required: false)
+
 </body>
 </html>

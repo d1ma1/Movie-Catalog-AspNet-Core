@@ -1,0 +1,95 @@
+
+.invisible {
+    opacity: 0;
+}
+
+.list .img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.list img:hover {
+    transform: scale(1.1);
+}
+
+.list {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    border-bottom: 2px solid var(--color-lightgray);
+    margin-bottom: 2rem;
+}
+
+.list-grid-header {
+    background: var(--color-orange);
+    color: white;
+    font-weight: bold;
+}
+
+.list-grid {
+    border-left: 2px solid var(--color-lightgray);
+    border-right: 2px solid var(--color-lightgray);
+}
+
+.list-grid i {
+    font-size: 3rem;
+    color: gray;
+    transition: transform 0.2s ease-in-out;
+}
+
+.list-grid i:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+.list-grid:nth-child(odd) {
+    background: var(--color-lightgray);
+}
+
+.list-grid, .list-grid-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 2fr 1fr 1fr 1.5fr 1fr 1fr;
+    padding: 1rem;
+    font-size: var(--list-font-size);
+    text-align: left;
+    grid-gap: 1rem;
+}
+
+.nav-alphabet ul {
+    display: grid;
+    grid-template-columns: repeat(8,100px);
+    padding-left: 6rem;
+    padding-bottom: 3em;
+}
+
+.nav-alphabet ul li {
+    display: block;
+}
+
+.nav-alphabet ul li a:hover {
+    font-weight: bold;
+}
+
+.nav-alphabet ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem 1rem;
+    border-radius: 100%;
+    text-transform: uppercase;
+    font-family: 'Kosugi Maru', sans-serif;
+    margin: 0.5em;
+    background: var(--color-diff);
+    color: white;
+    background: linear-gradient(90deg, white 0%, var(--color-diff2) 35%, var(--color-diff) 100%);
+    border-radius: 50%
+}
+
+.list-img img {
+    height: 60px;
+    border-radius: 0.2em;
+    border: 1px solid var(--color-black);
+    padding: 2px;
+    background-color: white;
+}
+
+.list-img p {
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+.site-nav {
+    background: var(--color-orange);
+    padding: 1rem 6rem;
+    height: 50px;
+}
+
+.site-nav ul {
+    display: flex;
+}
+
+.site-nav ul li {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.site-nav ul li a {
+    text-decoration: none;
+    padding: 1rem 4rem;
+    color: white;
+    border-right: 1px dotted white;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.site-nav ul li a:hover {
+    color: black;
+}
+
+.site-nav ul li:hover {
+    transform: scale(1.1);
+}
+
+.site-nav ul li:nth-child(1) a {
+    border-left: 1px dotted white;
+}

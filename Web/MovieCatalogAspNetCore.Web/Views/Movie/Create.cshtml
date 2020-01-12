@@ -1,0 +1,33 @@
+﻿@using MovieCatalogAspNetCore.Data.Models.Enums
+<section class="register">
+
+    <h4 class="latest-text">Регистрирай филм</h4>
+
+    <form class="register-movie" method="post">
+
+        <div class="one-row">
+
+            <input type="file" name="pic" id="pic" class="inputfile" />
+            <label for="pic"> <i class="fas fa-upload"></i> Качи корица</label>
+
+            <input type="file" name="video" id="video" class="input-mp4" />
+            <label for="video"> <i class="fas fa-upload"></i> Качи филм</label>
+        </div>
+
+        <input type="text" placeholder="Заглавие" name="Title">
+        <input type="text" placeholder="Режисьор" name="Directors">
+        <input type="text" placeholder="Актьори" name="Actors">
+        <input type="text" placeholder="Държава" name="Country">
+        @*@Html.DropDownList("Genre",
+        new SelectList(Enum.GetValues(typeof(Genre))),
+        "Жанр",
+        new { @class = "form-control" })*@
+
+        <input type="text" placeholder="Жанр" name="Genre">
+        <input type="text" placeholder="Година" name="Year">
+        <input type="text" placeholder="IMDB рейтинг" name="Stars">
+        <input type="text" placeholder="Описание" name="Description">
+        <div><button class="btn-create">Създай филм</button></div>
+
+    </form>
+</section>

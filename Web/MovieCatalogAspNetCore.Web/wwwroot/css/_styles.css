@@ -1,0 +1,99 @@
+
+.movie {
+    padding: 3rem 2rem;
+    margin-left: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2%;
+}
+
+.movie p {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-black);
+    padding-bottom: 0.5rem;
+}
+
+.movie i {
+    color: var(--color-orange);
+}
+
+.movie span .gray {
+    color: var(--color-lightgray);
+}
+
+.movie img {
+    height: 16vw;
+    width: auto;
+    border-radius: 0.3em;
+    border: 1px solid var(--color-black);
+    background-color: var(--color-lightgray);
+    padding: 0.5em;
+}
+
+.movie .stars i:nth-child(10), .movie3 .stars i:nth-child(9) {
+    color: var(--color-lightgray);
+}
+
+.movie info time {
+    float: left;
+    padding-right: 3rem;
+}
+
+.movie i:hover {
+    color: var(--color-lightgray);
+    transition: color 0.3s ease-out;
+}
+
+.movie .stars span {
+    padding-left: 1rem;
+}
+
+.site-main h4.latest-text, .site-movies h4.latest-text {
+    border-left: 0.2rem solid var(--color-orange);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: var(--color-black);
+    margin: 2.5rem 0 0 6rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.site-movies h4.latest-text {
+    margin-bottom: 2.5rem;
+}
+
+
+.subscribe {
+    padding: 1rem 6rem;
+}
+
+.subscribe p {
+    font-size: 1.5rem;
+    color: var(--color-black);
+    text-transform: uppercase;
+    font-style: normal;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.subscribe form {
+    width: 50%;
+    border: 1px solid #fff;
+    padding: 1rem;
+    background: var(--color-lightgray);
+}
+
+.subscribe input[type="email"] {
+    outline: none;
+    padding: 1rem;
+    font-size: 14px;
+    width: 74%;
+    border: none;
+}
+
+.subscribe .btn-subscribe {
+    background: var(--color-diff);
+    width: 25%;
+    padding: 1rem;
+}

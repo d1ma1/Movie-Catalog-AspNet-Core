@@ -1,0 +1,68 @@
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo p:nth-child(1) {
+    font-size: 1.2rem;
+    color: var(--color-orange);
+    letter-spacing: 5px;
+    line-height: 0.5rem;
+    text-align: right;
+}
+
+.logo p:nth-child(2) {
+    font-size: 2.3rem;
+    color: var(--color-black);
+    margin-right: 0.5rem;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.site-header .search form div {
+    display: flex;
+    flex-direction: row;
+}
+
+.site-header .search input[type="search"] {
+    border: none;
+    background: var(--color-lightgray);
+    text-align: center;
+    width: 30rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    margin-top: 3rem;
+    outline: none;
+}
+
+.site-header .search input[type="submit"] {
+    border: none;
+    background: var(--color-black);
+    padding: 10px 0;
+    color: var(--color-white);
+    width: 5em;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    margin-top: 3em;
+    outline: none;
+}
+
+.site-header .log-in {
+    margin: 3em;
+}
+
+.site-header .log-in .btn-log-in {
+    background: var(--color-orange);
+}
+
+.bg {
+    overflow: hidden;
+}
