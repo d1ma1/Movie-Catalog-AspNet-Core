@@ -2,17 +2,6 @@
 {
     using System.Reflection;
 
-    using MovieCatalogAspNetCore.Data;
-    using MovieCatalogAspNetCore.Data.Common;
-    using MovieCatalogAspNetCore.Data.Common.Repositories;
-    using MovieCatalogAspNetCore.Data.Models;
-    using MovieCatalogAspNetCore.Data.Repositories;
-    using MovieCatalogAspNetCore.Data.Seeding;
-    using MovieCatalogAspNetCore.Services.Data;
-    using MovieCatalogAspNetCore.Services.Mapping;
-    using MovieCatalogAspNetCore.Services.Messaging;
-    using MovieCatalogAspNetCore.Web.ViewModels;
-
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -20,6 +9,17 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using MovieCatalogAspNetCore.Data;
+    using MovieCatalogAspNetCore.Data.Common;
+    using MovieCatalogAspNetCore.Data.Common.Repositories;
+    using MovieCatalogAspNetCore.Data.Models;
+    using MovieCatalogAspNetCore.Data.Repositories;
+    using MovieCatalogAspNetCore.Data.Seeding;
+    using MovieCatalogAspNetCore.Services.Data;
+    using MovieCatalogAspNetCore.Services.Data.Contracts;
+    using MovieCatalogAspNetCore.Services.Mapping;
+    using MovieCatalogAspNetCore.Services.Messaging;
+    using MovieCatalogAspNetCore.Web.ViewModels;
 
     public class Startup
     {
@@ -59,7 +59,8 @@
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
-            //services.AddTransient<IMoviesService, MoviesService>();
+
+            // services.AddTransient<IMoviesService, MoviesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

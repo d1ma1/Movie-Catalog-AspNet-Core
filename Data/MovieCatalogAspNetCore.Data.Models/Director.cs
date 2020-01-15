@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace MovieCatalogAspNetCore.Data.Models
+﻿namespace MovieCatalogAspNetCore.Data.Models
 {
-    public class Director
-    {
-        public int Id { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text;
 
+    using MovieCatalogAspNetCore.Data.Common.Models;
+
+    public class Director : BaseDeletableModel<int>
+    {
         [Required]
         public string FirstName { get; set; }
 

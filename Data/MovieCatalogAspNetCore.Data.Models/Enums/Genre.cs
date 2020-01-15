@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MovieCatalogAspNetCore.Data.Models.Enums
+﻿namespace MovieCatalogAspNetCore.Data.Models.Enums
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text;
+
     public enum Genre
     {
+        [Display(Name = "Екшън")]
         Action = 1,
         Adventure = 2,
         Animation = 3,

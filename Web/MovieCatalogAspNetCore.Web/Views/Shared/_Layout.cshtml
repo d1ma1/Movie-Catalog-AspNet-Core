@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,15 +45,20 @@
             <nav class="site-nav">
                 <ul>
                     <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">начало</a></li>
-                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="DisplayAll">списък филми (а-я)</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Create">списък филми (а-я)</a></li>
                     <li> <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Create">регистрирай филм</a></li>
-                    <li><a href="{{ site.baseurl }}news.html">новини</a></li>
+                    <li><a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Create">новини</a></li>
+
+                    @* <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">начало</a></li>
+                        <li> <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="DisplayAll">списък филми (а-я)</a></li>
+                        <li> <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Create">регистрирай филм</a></li>
+                    <li><a href="{{ site.baseurl }}news.html">новини</a></li>*@
                 </ul>
             </nav>
         </header>
 
         <div class="bg">
-            @*<img src="~/images/test3.jpg" srcset="images/test3.jpg 500w, images/test3.jpg 1200w" alt="">*@
+            <img src="~/images/test3.jpg" srcset="~/images/test3.jpg 500w, ~/images/test3.jpg 1200w" alt="">
         </div>
 
         @this.RenderBody()

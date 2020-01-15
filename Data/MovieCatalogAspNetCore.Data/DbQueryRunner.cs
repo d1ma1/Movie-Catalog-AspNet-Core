@@ -3,9 +3,8 @@
     using System;
     using System.Threading.Tasks;
 
-    using MovieCatalogAspNetCore.Data.Common;
-
     using Microsoft.EntityFrameworkCore;
+    using MovieCatalogAspNetCore.Data.Common;
 
     public class DbQueryRunner : IDbQueryRunner
     {

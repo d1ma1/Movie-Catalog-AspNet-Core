@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace MovieCatalogAspNetCore.Data.Migrations
+﻿namespace MovieCatalogAspNetCore.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +18,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                     LastName = table.Column<string>(nullable: false),
                     StageName = table.Column<string>(nullable: true),
                     ShortBiography = table.Column<string>(nullable: true),
-                    ActorPhotoUrl = table.Column<string>(nullable: true)
+                    ActorPhotoUrl = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -35,7 +36,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                     CreatedOn = table.Column<DateTime>(nullable: false),
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    DeletedOn = table.Column<DateTime>(nullable: true)
+                    DeletedOn = table.Column<DateTime>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -64,7 +65,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                     CreatedOn = table.Column<DateTime>(nullable: false),
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    DeletedOn = table.Column<DateTime>(nullable: true)
+                    DeletedOn = table.Column<DateTime>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -80,7 +81,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                     FirstName = table.Column<string>(nullable: false),
                     LastName = table.Column<string>(nullable: false),
                     ShortBiography = table.Column<string>(nullable: true),
-                    ActorPhotoUrl = table.Column<string>(nullable: true)
+                    ActorPhotoUrl = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -100,7 +101,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                     Year = table.Column<int>(nullable: false),
                     Genre = table.Column<int>(nullable: false),
                     Country = table.Column<int>(nullable: false),
-                    Description = table.Column<string>(nullable: true)
+                    Description = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -118,7 +119,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
-                    Value = table.Column<string>(nullable: true)
+                    Value = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -133,7 +134,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
-                    ClaimValue = table.Column<string>(nullable: true)
+                    ClaimValue = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -154,7 +155,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
-                    ClaimValue = table.Column<string>(nullable: true)
+                    ClaimValue = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -174,7 +175,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                     LoginProvider = table.Column<string>(nullable: false),
                     ProviderKey = table.Column<string>(nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
-                    UserId = table.Column<string>(nullable: false)
+                    UserId = table.Column<string>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -192,7 +193,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
-                    RoleId = table.Column<string>(nullable: false)
+                    RoleId = table.Column<string>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -218,7 +219,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                     UserId = table.Column<string>(nullable: false),
                     LoginProvider = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: false),
-                    Value = table.Column<string>(nullable: true)
+                    Value = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -236,7 +237,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                 columns: table => new
                 {
                     ActorId = table.Column<int>(nullable: false),
-                    MovieId = table.Column<int>(nullable: false)
+                    MovieId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -260,7 +261,7 @@ namespace MovieCatalogAspNetCore.Data.Migrations
                 columns: table => new
                 {
                     DirectorId = table.Column<int>(nullable: false),
-                    MovieId = table.Column<int>(nullable: false)
+                    MovieId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {

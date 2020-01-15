@@ -3,12 +3,11 @@
     using System;
     using System.Threading.Tasks;
 
+    using Microsoft.AspNetCore.Mvc;
     using MovieCatalogAspNetCore.Data.Common.Repositories;
     using MovieCatalogAspNetCore.Data.Models;
     using MovieCatalogAspNetCore.Services.Data;
     using MovieCatalogAspNetCore.Web.ViewModels.Settings;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class SettingsController : BaseController
     {

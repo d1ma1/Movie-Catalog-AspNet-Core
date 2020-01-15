@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-using MovieCatalogAspNetCore.Data.Models.Enums;
-
-namespace MovieCatalogAspNetCore.Data.Models
+﻿namespace MovieCatalogAspNetCore.Data.Models
 {
-    public class Movie
-    {
-        public int Id { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text;
 
+    using MovieCatalogAspNetCore.Data.Common.Models;
+    using MovieCatalogAspNetCore.Data.Models.Enums;
+
+    public class Movie : BaseDeletableModel<int>
+    {
         public string Title { get; set; }
 
         public string MovieImageUrl { get; set; }
@@ -32,6 +31,5 @@ namespace MovieCatalogAspNetCore.Data.Models
         public ICollection<ActorMovie> ActorsMovies { get; set; } = new List<ActorMovie>();
 
         public ICollection<DirectorMovie> DirectorsMovies { get; set; } = new List<DirectorMovie>();
-
     }
 }

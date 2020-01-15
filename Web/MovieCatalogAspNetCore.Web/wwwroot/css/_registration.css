@@ -14,7 +14,7 @@
     text-transform: uppercase;
 }
 
-.register input[type="text"], .btn {
+.register input, .btn, .register-movie select {
     outline: none;
     border: 1px solid #D4D3D3;
     background: var(--color-lightgray);
@@ -26,9 +26,13 @@
     text-align: center;
 }
 
-.register-movie input:nth-child(7), .register-movie input:nth-child(8){
-    width: 39%;
+.register-movie select {
+    color: gray;
 }
+
+    .register select, .register-movie input:nth-child(7), .register-movie input:nth-child(8) {
+        width: 39%;
+    }
 
 .btn-create {
     background: var(--color-orange);

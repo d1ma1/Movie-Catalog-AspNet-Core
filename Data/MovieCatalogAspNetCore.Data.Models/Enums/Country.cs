@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MovieCatalogAspNetCore.Data.Models.Enums
+﻿namespace MovieCatalogAspNetCore.Data.Models.Enums
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text;
+
     public enum Country
     {
+        [Display(Name = "Афганистан")]
         Afghanistan = 1,
+        [Display(Name = "Албания")]
         Albania = 2,
+        [Display(Name = "Алжир")]
         Algeria = 3,
         Andorra = 4,
         Angola = 5,

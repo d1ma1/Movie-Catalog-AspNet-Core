@@ -1,9 +1,8 @@
 ﻿namespace MovieCatalogAspNetCore.Web.Areas.Administration.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using MovieCatalogAspNetCore.Services.Data;
     using MovieCatalogAspNetCore.Web.ViewModels.Administration.Dashboard;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class DashboardController : AdministrationController
     {

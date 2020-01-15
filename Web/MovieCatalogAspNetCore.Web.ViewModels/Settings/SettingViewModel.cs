@@ -1,9 +1,8 @@
 ﻿namespace MovieCatalogAspNetCore.Web.ViewModels.Settings
 {
+    using AutoMapper;
     using MovieCatalogAspNetCore.Data.Models;
     using MovieCatalogAspNetCore.Services.Mapping;
-
-    using AutoMapper;
 
     public class SettingViewModel : IMapFrom<Setting>, IHaveCustomMappings
     {

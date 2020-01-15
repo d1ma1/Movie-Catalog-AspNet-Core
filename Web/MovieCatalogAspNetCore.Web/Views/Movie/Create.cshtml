@@ -1,4 +1,13 @@
-﻿@using MovieCatalogAspNetCore.Data.Models.Enums
+@using MovieCatalogAspNetCore.Data.Models.Enums
+@using MovieCatalogAspNetCore.Web.ViewModels.InputModels
+@using MovieCatalogAspNetCore.Web.ViewModels
+
+@model MovieInputModel
+@{
+    ViewData["Title"] = "Регистрирай филм";
+}
+
+
 <section class="register">
 
     <h4 class="latest-text">Регистрирай филм</h4>
@@ -7,26 +16,35 @@
 
         <div class="one-row">
 
-            <input type="file" name="pic" id="pic" class="inputfile" />
+            <input type="file" asp-for="@Model.MovieImageUrl" name="pic" id="pic" class="inputfile" />
             <label for="pic"> <i class="fas fa-upload"></i> Качи корица</label>
 
-            <input type="file" name="video" id="video" class="input-mp4" />
+            <input type="file" asp-for="@Model.MovieImageUrl" name="video" id="video" class="input-mp4" />
             <label for="video"> <i class="fas fa-upload"></i> Качи филм</label>
+
+            @*<label asp-for="@Model.MovieImageUrl" class="inputfile required"><i class="fas fa-upload"></i> Качи корица</label>
+            <input type="file" asp-for="@Model.MovieImageUrl" class="image-upload" />
+
+            <label asp-for="@Model.MovieImageUrl" class="inputfile required"><i class="fas fa-upload"></i> Качи филм</label>
+            <input type="file" asp-for="@Model.MovieTrailerUrl" class="image-upload" />*@
         </div>
 
-        <input type="text" placeholder="Заглавие" name="Title">
-        <input type="text" placeholder="Режисьор" name="Directors">
-        <input type="text" placeholder="Актьори" name="Actors">
-        <input type="text" placeholder="Държава" name="Country">
-        @*@Html.DropDownList("Genre",
-        new SelectList(Enum.GetValues(typeof(Genre))),
-        "Жанр",
-        new { @class = "form-control" })*@
+        <input asp-for="@Model.Title" type="text" placeholder="Заглавие">
+        <input asp-for="@Model.Directors" placeholder="Режисьор">
+        <input asp-for="@Model.Actors" placeholder="Актьори">
 
-        <input type="text" placeholder="Жанр" name="Genre">
-        <input type="text" placeholder="Година" name="Year">
-        <input type="text" placeholder="IMDB рейтинг" name="Stars">
-        <input type="text" placeholder="Описание" name="Description">
+        @*asp-for="@Model.SelectedValue"*@
+        <select asp-for="@Model.Country" asp-items="Html.GetEnumSelectList<Country>()">
+            <option selected="true" disabled="disabled">-- Изберете държава --</option>"
+        </select>
+        <select asp-for="@Model.Genre" asp-items="Html.GetEnumSelectList<Genre>()">
+            <option selected="true" disabled="disabled">-- Изберете жанр --</option>"
+        </select>
+
+        <input asp-for="@Model.Year" placeholder="Година">
+        <input asp-for="@Model.Stars" placeholder="IMDB рейтинг">
+        <input asp-for="@Model.Description" type="text" placeholder="Описание">
+
         <div><button class="btn-create">Създай филм</button></div>
 
     </form>

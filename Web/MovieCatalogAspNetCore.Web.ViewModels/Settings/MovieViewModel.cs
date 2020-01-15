@@ -1,12 +1,13 @@
-﻿using MovieCatalogAspNetCore.Data.Models;
-using MovieCatalogAspNetCore.Data.Models.Enums;
-using MovieCatalogAspNetCore.Services.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MovieCatalogAspNetCore.Web.ViewModels.Settings
+﻿namespace MovieCatalogAspNetCore.Web.ViewModels.Settings
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using MovieCatalogAspNetCore.Data.Models;
+    using MovieCatalogAspNetCore.Data.Models.Enums;
+    using MovieCatalogAspNetCore.Services.Mapping;
+
     public class MovieViewModel : IMapFrom<Movie>
     {
         // public int Id { get; set; }

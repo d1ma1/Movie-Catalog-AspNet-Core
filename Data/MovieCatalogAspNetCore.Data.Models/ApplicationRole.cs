@@ -3,9 +3,8 @@ namespace MovieCatalogAspNetCore.Data.Models
 {
     using System;
 
-    using MovieCatalogAspNetCore.Data.Common.Models;
-
     using Microsoft.AspNetCore.Identity;
+    using MovieCatalogAspNetCore.Data.Common.Models;
 
     public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity
     {

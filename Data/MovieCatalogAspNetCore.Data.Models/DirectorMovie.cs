@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MovieCatalogAspNetCore.Data.Models
+﻿namespace MovieCatalogAspNetCore.Data.Models
 {
-    public class DirectorMovie
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using MovieCatalogAspNetCore.Data.Common.Models;
+
+    public class DirectorMovie : BaseDeletableModel<int>
     {
         public int DirectorId { get; set; }
 

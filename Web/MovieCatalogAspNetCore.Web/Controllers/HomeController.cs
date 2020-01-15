@@ -2,9 +2,8 @@
 {
     using System.Diagnostics;
 
-    using MovieCatalogAspNetCore.Web.ViewModels;
-
     using Microsoft.AspNetCore.Mvc;
+    using MovieCatalogAspNetCore.Web.ViewModels;
 
     public class HomeController : BaseController
     {

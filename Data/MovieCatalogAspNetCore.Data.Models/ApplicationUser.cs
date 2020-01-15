@@ -4,9 +4,8 @@ namespace MovieCatalogAspNetCore.Data.Models
     using System;
     using System.Collections.Generic;
 
-    using MovieCatalogAspNetCore.Data.Common.Models;
-
     using Microsoft.AspNetCore.Identity;
+    using MovieCatalogAspNetCore.Data.Common.Models;
 
     public class ApplicationUser : IdentityUser, IAuditInfo, IDeletableEntity
     {

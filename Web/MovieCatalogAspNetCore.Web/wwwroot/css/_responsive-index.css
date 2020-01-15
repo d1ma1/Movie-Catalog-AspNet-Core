@@ -2,7 +2,7 @@
 
     .site-nav ul {
         display: grid;
-        grid-template-columns: 1fr;;
+        grid-template-columns: 1fr;
     }
 
     .site-nav ul li {
@@ -117,7 +117,11 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-    } 
+    }
+
+    .register-movie select {
+        font-size: 10px !important;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -175,5 +179,9 @@
 
     .latest-text, .news-latest-text {
         margin: 0.5rem 0 1rem 3rem !important;
+    }
+
+    .register-movie select {
+        font-size: 8px !important;
     }
 }

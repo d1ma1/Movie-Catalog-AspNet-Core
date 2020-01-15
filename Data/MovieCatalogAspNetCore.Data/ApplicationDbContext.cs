@@ -6,11 +6,10 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    using MovieCatalogAspNetCore.Data.Common.Models;
-    using MovieCatalogAspNetCore.Data.Models;
-
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
+    using MovieCatalogAspNetCore.Data.Common.Models;
+    using MovieCatalogAspNetCore.Data.Models;
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
     {
